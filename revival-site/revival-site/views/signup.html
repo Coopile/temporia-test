@@ -1,0 +1,23 @@
+<section class="panel">
+  <h1>Create your account</h1>
+  <p class="muted">Free to join.</p>
+  {{error}}
+  <form method="post" action="/signup">
+    <div {{requireDiscord}}>
+      <p class="muted">Join <a href="{{discordInvite}}">our Discord</a>, verify there, and paste the code you get.</p>
+      <label>Verification code <input name="code" autocomplete="off"></label>
+    </div>
+    <label>Username <input name="username" required minlength="3" maxlength="20" autocomplete="username"></label>
+    <label>Password <input type="password" name="password" required minlength="8" autocomplete="new-password"></label>
+    <label>Confirm password <input type="password" name="confirm" required minlength="8" autocomplete="new-password"></label>
+    <label>Avatar
+      <select name="avatar">
+        <option value="classic">Classic</option>
+        <option value="blue">Blue</option>
+        <option value="pink">Pink</option>
+      </select>
+    </label>
+    <button class="btn" type="submit">Create account</button>
+  </form>
+  <p class="muted">Already registered? <a href="/login">Log in</a></p>
+</section>

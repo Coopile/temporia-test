@@ -1,0 +1,11 @@
+{
+  "name": "revival-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Website scaffold for a game platform: accounts, avatar pick, launcher download page. No dependencies.",
+  "main": "server.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
